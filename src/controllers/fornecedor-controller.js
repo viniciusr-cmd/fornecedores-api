@@ -3,6 +3,7 @@
 // preco frete
 
 const bd = require('../infra/sqlite-db')
+const Fornecedor = require('../models/Fornecedor')
 
 const fornecedores = (app) => {
   app.get('/fornecedores', (req, res) => {
