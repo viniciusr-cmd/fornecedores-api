@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./src/app.js",
-    "dev": "nodemon .src/app.js"
+    "dev": "nodemon ./src/app.js"
   },
-  "author": "",
+  "author": "viniciusr-cmd (Vinicius Ribeiro)",
   "license": "ISC",
   "dependencies": {
     "consign": "^0.1.6",

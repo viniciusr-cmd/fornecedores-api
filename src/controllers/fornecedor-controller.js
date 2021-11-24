@@ -1,47 +1,30 @@
-// endereco cliente *
-// endereco fornecedor
-// preco frete
-
 const bd = require('../infra/sqlite-db')
 const Fornecedor = require('../models/Fornecedor')
 
 const fornecedores = (app) => {
-  app.get('/fornecedores', (req, res) => {
-    res.json({
-      "fornecedores": bd.fornecedores
-    })
+  app.get('/', (req, res) => {
+    res.send('<h1>Daora po</h1>')
   })
 
   app.get('/fornecedores', (req, res) => { // req = request / res = response
-    bd.all('SELECT * FROM ENDERECO_FORNECEDOR', (err, rows) => {
-      if (err) {
-        res.status(400).json({ "error": err.message })
-      } else {
-        res.json({
-          "error": false,
-          "endereco_fornecedores": rows
-        })
-      }
-    })
-  }
-  )
+    Fornecedor.lista(req, res)
+  })
 
   app.get('/fornecedores/:id', (req, res) => { // req = request / res = response
-    const body = req.body
-    const id = req.params.id
+    Fornecedor.selecionaID(req, res)
+  })
 
-    bd.all(`SELECT * FROM ENDERECO_FORNECEDOR WHERE id = ${id}`, (err, rows) => {
-      if (err) {
-        res.status(400).json({ "error": err.message })
-      } else {
-        res.json({
-          "error": false,
-          "id": rows
-        })
-      }
-    })
-  }
-  )
+  app.post('/fornecedores/:id', (req, res) => {
+    Fornecedor.adicionaFornecedor(req, res)
+  })
+
+  app.patch('/fornecedores/:id', (req, res) => {
+    Fornecedor.atualizaFornecedor(req, res)
+  })
+
+  app.delete('/fornecedores/:id', (req, res) => {
+    Fornecedor.deleteFornecedor(req, res)
+  })
 }
 
 module.exports = fornecedores
