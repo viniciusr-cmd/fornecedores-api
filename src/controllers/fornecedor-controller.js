@@ -14,7 +14,7 @@ const fornecedores = (app) => {
     Fornecedor.selecionaID(req, res)
   })
 
-  app.post('/fornecedores/:id', (req, res) => {
+  app.post('/fornecedores', (req, res) => {
     Fornecedor.adicionaFornecedor(req, res)
   })
 

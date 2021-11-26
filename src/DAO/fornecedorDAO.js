@@ -35,7 +35,7 @@ class FornecedorDAO {
 
   addFornecedor(body, fornecedordb) {
     return new Promise((resolve, reject) => {
-      fornecedordb.run(`INSERT INTO ENDERECO_FORNECEDOR (ENDERECO, NOME_DO_FORNECEDOR, FRETE_POR_KM) VALUES (?, ?, ?)`, [body.endereco, body.nome_do_fornecedor, body.frete_por_km], (err) => {
+      fornecedordb.run(`INSERT INTO ENDERECO_FORNECEDOR (ENDERECO, NOME_DO_FORNECEDOR, FRETE_POR_KM) VALUES (?, ?, ?)`, [body.ENDERECO, body.NOME_DO_FORNECEDOR, body.FRETE_POR_KM], (err) => {
         if (err) {
           reject(({ "mensagem": err.message, "error": true }))
         } else {
