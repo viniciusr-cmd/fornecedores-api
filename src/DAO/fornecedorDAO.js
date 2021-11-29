@@ -66,7 +66,7 @@ class FornecedorDAO {
 
   updateFornecedor(id, body, fornecedordb) {
     return new Promise((resolve, reject) => {
-      fornecedordb.run(`UPDATE ENDERECO_FORNECEDOR SET (ENDERECO, NOME_DO_FORNECEDOR, FRETE_POR_KM) = (?, ?, ?) WHERE id = ?`, [body.endereco, body.nome_do_fornecedor, body.frete_por_km], id, (err) => {
+      fornecedordb.run(`UPDATE ENDERECO_FORNECEDOR SET (ENDERECO, NOME_DO_FORNECEDOR, FRETE_POR_KM) = (?, ?, ?) WHERE id = ?`, [body.ENDERECO, body.NOME_DO_FORNECEDOR, body.FRETE_POR_KM, id], (err) => {
         if (err) {
           reject(({ "mensagem": err.message, "error": true }))
         } else {
