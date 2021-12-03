@@ -1,4 +1,4 @@
-# Desenvolvimento de uma API-Rest em NodeJs utilizando express.
+# Desenvolvimento de uma API-Rest em NODE.JS utilizando EXPRESS.
 
 ## Descrição:
 Aplicação <b>BACK-END</b> que gerencia e automatiza uma rotina de fornecedores de uma loja de informática. Para isso foi utilizado o banco de dados relacional SQLite, com o padrão do tipo REST e como organizador de conceitos, o MVC.
