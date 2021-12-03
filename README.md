@@ -94,7 +94,7 @@ Utilizar o método HTTP <b>DELETE</b> no caminho <b>"URL" + /fornecedores/:id</b
 <br>
 
 ### Exemplo de GET na Interface do POSTMAN
-![Exemplo de GET no POSTMAN](https://prnt.sc/21lzczh "GET no POSTMAN")
+![Exemplo de GET no POSTMAN](https://docs.microsoft.com/pt-br/graph/images/postman-screenshot.png "GET no POSTMAN")
 
 ### + OBS 2: Caso você apague o arquivo do banco de dados sem querer, rode o comando abaixo para criar outro novamente, mas atenção, *esse novo banco virá vazio*, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
 
