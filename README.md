@@ -6,7 +6,7 @@ Aplicação <b>BACK-END</b> que gerencia e automatiza uma rotina de fornecedores
 ## Ferramentas utilizadas:
 Para o desenvolvimento, foi utilizado <b>*JavaScript*</b> com <b>*NodeJS*</b>, e <b>*Express*</b> como Framework, além do banco de dados relacional <b>*SQLite*</b> e hospedagem pela <b>*Heroku*</b>.
 
-## Dependencias necessárias:
+## Dependências necessárias:
 ```js
 "dependencies": {
     "chalk": "^4.1.2",
@@ -17,18 +17,18 @@ Para o desenvolvimento, foi utilizado <b>*JavaScript*</b> com <b>*NodeJS*</b>, e
     "sqlite3": "^5.0.2"
   }
 ```
-As dependencias podem ser encontradas <a href = 'https://github.com/viniciusr-cmd/fornecedores-api/blob/main/package.json'><b>AQUI</b></a> do qual o trecho acima foi extraído, para instalar basta rodar o comando abaixo selecionando e copiando o mesmo com as teclas *Ctrl + C* e em seguida colar no terminal com as telas *Ctrl + Shift + V*, o comando abaixo já irá fazer o clone deste repositório e instalar as dependencias necessárias.
+As Dependências podem ser encontradas <a href = 'https://github.com/viniciusr-cmd/fornecedores-api/blob/main/package.json'><b>AQUI</b></a> do qual o trecho acima foi extraído, para instalar basta rodar o comando abaixo selecionando e copiando o mesmo com as teclas *Ctrl + C* e em seguida colar no terminal com as telas *Ctrl + Shift + V*, o comando abaixo já irá fazer o clone deste repositório e instalar as Dependências necessárias.
 
 ```
 git clone https://github.com/viniciusr-cmd/fornecedores-api.git && cd fornecedores-api && npm install
 ```
-## Dependencias de desenvolvimento:
+## Dependências de desenvolvimento:
 ```json
 "devDependencies": {
     "nodemon": "^2.0.15"
   }
 ```
-Em outra parte do <a href = 'https://github.com/viniciusr-cmd/fornecedores-api/blob/main/package.json'><b>Arquivo de configuração</b></a> é possível encontrar o código acima que foi extraído do mesmo, *essas são as dependencias necessárias para o ambiente de desenvolvimento da aplicação*, caso deseje instalar utilize os comandos abaixo em seu terminal logo após o comando das dependencias obrigatórias.
+Em outra parte do <a href = 'https://github.com/viniciusr-cmd/fornecedores-api/blob/main/package.json'><b>Arquivo de configuração</b></a> é possível encontrar o código acima que foi extraído do mesmo, *essas são as Dependências necessárias para o ambiente de desenvolvimento da aplicação*, caso deseje instalar utilize os comandos abaixo em seu terminal logo após o comando das Dependências obrigatórias.
 
 ```
 npm install --save-dev nodemon
@@ -42,7 +42,7 @@ npm start
 
 ## Observação importante:
 
-A versão <b>NODE.JS</b> utilizada para desenvolvimento é a *16.x LTS*, logo é necessário intalação de versão igual ou superior para a perfeita execução da mesma.
+A versão <b>NODE.JS</b> utilizada para desenvolvimento é a *16.x LTS*, logo é necessário instalação de versão igual ou superior para a perfeita execução da mesma.
 
 ## Rotas da API:
 
@@ -96,7 +96,7 @@ Utilizar o método HTTP <b>DELETE</b> no caminho <b>"URL" + /fornecedores/:id</b
 ### Exemplo de GET na Interface do POSTMAN
 ![Exemplo de GET no POSTMAN](https://docs.microsoft.com/pt-br/graph/images/postman-screenshot.png "GET no POSTMAN")
 
-### +OBS 2: Caso você apague o arquivo do banco de dados sem querer, rode o comando abaixo para criar outro novamente, mas atenção, *esse novo banco virá vazio*, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
+### + OBS 2: Caso você apague o arquivo do banco de dados sem querer, rode o comando abaixo para criar outro novamente, mas atenção, *esse novo banco virá vazio*, apenas com a linha 1 contendo o exemplo dos tipos de dados aceitos nele.
 
 ```node
 node ./src/infra/create-database.js
