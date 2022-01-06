@@ -12,6 +12,16 @@ class Fornecedor {
     }
   }
 
+  static async selecionaNome(req, res) {
+    try {
+      const nome = req.params.nome
+      const nomeFornecedor = await FornecedorDAO.selectNomeFornecedor(nome, database)
+      res.status(200).json(nomeFornecedor)
+    } catch (err) {
+      res.status(400).json(chalk.redBright(err))
+    }
+  }
+
   static async selecionaID(req, res) {
     try {
       const id = req.params.id

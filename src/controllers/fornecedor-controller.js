@@ -3,11 +3,15 @@ const Fornecedor = require('../models/Fornecedor')
 
 const fornecedores = (app) => {
   app.get('/', (req, res) => {
-    res.send('<h1>Daora po</h1>')
+    res.send('<h1>Bem vindo a FornecedoresAPI, utilize o endpoint /fornecedores para acessar</h1>')
   })
 
   app.get('/fornecedores', (req, res) => { // req = request / res = response
     Fornecedor.lista(req, res)
+  })
+
+  app.get('/fornecedores/:nome', (req, res) => { // req = request / res = response
+    Fornecedor.selecionaNome(req, res)
   })
 
   app.get('/fornecedores/:id', (req, res) => { // req = request / res = response

@@ -17,6 +17,23 @@ class FornecedorDAO {
     )
   }
 
+  selectNomeFornecedor(nome, fornecedordb) {
+    return new Promise((resolve, reject) => {
+      fornecedordb.all('SELECT * FROM ENDERECO_FORNECEDOR WHERE NOME_DO_FORNECEDOR = ?', nome, (err, rows) => {
+        if (err) {
+          reject(({ "mensagem": err.message, "error": true }))
+        } else {
+          resolve({
+            "fornecedor": rows,
+            "count": rows.length,
+            "error": false
+          })
+        }
+      })
+    }
+    )
+  }
+
   selectID(id, fornecedordb) {
     return new Promise((resolve, reject) => {
       fornecedordb.all(`SELECT * FROM ENDERECO_FORNECEDOR WHERE id = ?`, id, (err, rows) => {
