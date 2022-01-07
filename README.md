@@ -67,9 +67,9 @@ Utilizar o método HTTP <b>POST</b> no caminho <b>"URL" + /fornecedores</b> com 
 
 ```json
     {
-        "ENDERECO": "ENDEREÇO LEGAL",
-        "NOME_DO_FORNECEDOR": "NOME MANEIRO E LEGAL D+",
-        "FRETE_POR_KM": "01.00"
+        "ENDERECO": "Taipei, Taiwan",
+        "NOME_DO_FORNECEDOR": "ASUS",
+        "FRETE_POR_KM": "00.00"
     }
 ```
 <br>
@@ -79,9 +79,9 @@ Utilizar o método HTTP <b>POST</b> no caminho <b>"URL" + /fornecedores</b> com 
 Utilizar o método HTTP <b>PATCH</b> no caminho <b>"URL" + /fornecedores/:id</b> passando os valores que deseja alterar especificando seus devidos campos. Para isso basta respeitar a sintaxe json novamente, passada abaixo no corpo da requisição.
 ```json
     {
-        "ENDERECO": "ENDEREÇO MAIS LEGAL AINDA",
-        "NOME_DO_FORNECEDOR": "NOME MAIS MANEIRO DE BOM AINDA",
-        "FRETE_POR_KM": "02.00"
+        "ENDERECO": "Taipei, Taiwan",
+        "NOME_DO_FORNECEDOR": "ASUS",
+        "FRETE_POR_KM": "10.00"
     }
 ```
 <br>
